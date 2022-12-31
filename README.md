@@ -34,14 +34,14 @@ After this you should find any binaries in the folders of your $PATH will have t
 
 $ paxctl -v /bin/bash                
 PaX control v0.9
-Copyright 2004,2005,2006,2007,2009,2010,2011,2012,2014 PaX Team <pageexec@freemail.hu>
+Copyright 2004,2005,2006,2007,2009,2010,2011,2012,2014 PaX Team <pageexec@freemail.hu> <br>
 
-- PaX flags: P-S-M--xE-R- [/bin/bash]
-	PAGEEXEC is enabled
-	SEGMEXEC is enabled
-	MPROTECT is enabled
-	RANDEXEC is disabled
-	EMUTRAMP is enabled
-	RANDMMAP is enabled
+- PaX flags: P-S-M--xE-R- [/bin/bash]<br>
+	PAGEEXEC is enabled<br>
+	SEGMEXEC is enabled<br>
+	MPROTECT is enabled<br>
+	RANDEXEC is disabled<br>
+	EMUTRAMP is enabled<br>
+	RANDMMAP is enabled<br>
 
 Keep in mind RANDEXEC will not work with kernels past 2.6. This was due to RANDEXEC causing more problems than it solved. So it is not needed. 
