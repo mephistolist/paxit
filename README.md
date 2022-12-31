@@ -26,9 +26,9 @@ cp target/release/paxit /usr/bin
 After this you can run like so:
 
 $ sudo paxit
-[sudo] password for me: 
-About to commit 'paxctl -PEMRXS' to all ELF binaries in $PATH directories.
-Would you like to proceed? [Y/N] 
+[sudo] password for me:<br>
+About to commit 'paxctl -PEMRXS' to all ELF binaries in $PATH directories.<br>
+Would you like to proceed? [Y/N] <br>
 
 After this you should find any binaries in the folders of your $PATH will have the following flags from paxctl applied:
 
