@@ -39,7 +39,8 @@ fn main() -> Result<(), Box<(dyn std::error::Error + 'static)>> {
     }
     
     if !Uid::effective().is_root() {
-        panic!("You must be root/sudo/doas. Come back when you are.");
+        println!("You must be root/sudo/doas. Come back when you are.");
+        process::exit(0x0100);
     }
 
     unsafe { // Set priority on this process to 15.
