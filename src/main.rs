@@ -10,8 +10,8 @@ use std::process::{
 use std::fs::File;
 use std::time::Duration;
 use std::thread::sleep;
-use nix::unistd::Uid;
 use std::io::prelude::*;
+use nix::unistd::Uid;
 
 fn take_thread(s: String){
 
