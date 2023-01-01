@@ -3,9 +3,9 @@ Project in Rust to apply paxctl to all binaries in $PATH.
 
 This should work on any nix system, but there are a couple dependancies:
 
-rustc
-cargo
-paxctl
+rustc<br>
+cargo<br>
+paxctl<br>
 
 Once these are installed you can clone this repository like so:
 
