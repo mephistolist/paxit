@@ -11,6 +11,8 @@ use std::fs::File;
 use std::time::Duration;
 use std::thread::sleep;
 use std::io::prelude::*;
+use std::process;
+use std::path::Path;
 use nix::unistd::Uid;
 
 fn take_thread(s: String){
@@ -31,6 +33,11 @@ fn take_thread(s: String){
 
 fn main() -> Result<(), Box<(dyn std::error::Error + 'static)>> {
 
+    if !Path::new("/usr/sbin/paxctl").exists() {
+        println!("Paxctl was not found.\nPlease install this and try again.");
+        process::exit(0x0100);
+    }
+    
     if !Uid::effective().is_root() {
         panic!("You must be root/sudo/doas. Come back when you are.");
     }
