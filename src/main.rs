@@ -47,12 +47,12 @@ fn main() -> Result<(), Box<(dyn std::error::Error + 'static)>> {
         libc::setpriority(libc::PRIO_PROCESS, 0, 15);
     }
 
-    let foo = match env::var("PATH") {
+    let path_var = match env::var("PATH") {
         Ok(val) => val,
         Err(_e) => "Failed to get $PATH variable.".to_string(),
     };
 
-    let output = foo.replace(":", "\n"); // Replace : in $PATH with new lines.
+    let output = path_var.replace(':', "\n"); // Replace : in $PATH with new lines.
     println!("About to commit 'paxctl -PEMRXS' to all ELF binaries in $PATH directories.");
     println!("Would you like to proceed? [Y/N] ");
 
@@ -72,7 +72,7 @@ fn main() -> Result<(), Box<(dyn std::error::Error + 'static)>> {
 
     for a in strings {
         let mut thread_handles = vec![];
-        let entries = fs::read_dir(a.to_string()).unwrap();
+        let entries = fs::read_dir(a).unwrap();
         for entry in entries {
             // Get files in directories taken from $PATH.
             let entry = entry.unwrap();
