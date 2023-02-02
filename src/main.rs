@@ -44,7 +44,7 @@ fn main() -> Result<(), Box<(dyn std::error::Error + 'static)>> {
     
     // Confirm user is root
     if !Uid::effective().is_root() {
-        println!("You must be root/sudo/doas. Come back when you are.");
+        println!("You must use sudo or doas to run this.\nRoot or non-root usage may be problematic.");
         process::exit(0x0100);
     }
 
