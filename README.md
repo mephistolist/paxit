@@ -3,7 +3,6 @@ Project in Rust to apply paxctl to all binaries in $PATH.
 
 This should work on any nix system, but there are a couple dependancies:
 
-rustc<br>
 cargo<br>
 paxctl<br>
 
@@ -45,3 +44,5 @@ Copyright 2004,2005,2006,2007,2009,2010,2011,2012,2014 PaX Team <pageexec@freema
 	RANDMMAP is enabled<br>
 
 Keep in mind RANDEXEC will not work with kernels past 2.6. This was due to RANDEXEC causing more problems than it solved. So it is not needed. 
+
+Remember to only run this with sudo or doas. Root or non-root usage may be problematic. 
