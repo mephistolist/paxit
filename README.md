@@ -6,6 +6,10 @@ This should work on any nix system, but there are a couple dependancies:
 cargo<br>
 paxctl<br>
 
+A few months after completing this project, the package for paxctl was removed from new Debian distros, but still remains in the repositories of Arch. For now you may still find a Debian package of paxctl at the link below:
+
+https://packages.debian.org/buster/admin/paxctl 
+
 Once these are installed you can clone this repository like so:
 
 git clone https://github.com/mephistolist/paxit.git
