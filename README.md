@@ -8,11 +8,11 @@ cargo
 paxctl
 ```
 
-A few months after completing this project, the package for paxctl was removed from new Debian distros, but still remains in the repositories of Arch. For now you may still find a Debian package of paxctl at the link below:
+A few months after completing this project, the package for paxctl was removed from new Debian distros, but still remains here:
 
-https://packages.debian.org/buster/admin/paxctl 
+https://github.com/ystk/debian-paxctl
 
-Once these are installed you can clone this repository like so:
+Once that is built and installed you can clone this repository like so:
 
 ```git clone https://github.com/mephistolist/paxit.git```
 
